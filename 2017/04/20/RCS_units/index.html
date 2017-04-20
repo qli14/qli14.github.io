@@ -3,27 +3,21 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Install Spyder for Python | Blog of Qiang</title>
+  <title>Units of Radar Cross Section | Blog of Qiang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Spyder is a the Scientific PYthon Development Environment， with an interface very similar to that of Matlab.
-Use the command
-1pip install spyder
-to install Spyder after the installation of Python envi">
+  <meta name="description" content="Scattering Width: Two-Dimensional Target$$\sigma_{2-D} = lim_{\rho\rightarrow\infty}[2\pi\rho\frac{|\mathrm{E}^s|^2}{|\mathrm{E}^i|^2}]$$
+Thus the unit of the scattering width is meters. With 1 meter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Install Spyder for Python">
-<meta property="og:url" content="http://yoursite.com/2017/03/25/Spyder/index.html">
+<meta property="og:title" content="Units of Radar Cross Section">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/RCS_units/index.html">
 <meta property="og:site_name" content="Blog of Qiang">
-<meta property="og:description" content="Spyder is a the Scientific PYthon Development Environment， with an interface very similar to that of Matlab.
-Use the command
-1pip install spyder
-to install Spyder after the installation of Python envi">
-<meta property="og:updated_time" content="2017-03-26T04:36:01.590Z">
+<meta property="og:description" content="Scattering Width: Two-Dimensional Target$$\sigma_{2-D} = lim_{\rho\rightarrow\infty}[2\pi\rho\frac{|\mathrm{E}^s|^2}{|\mathrm{E}^i|^2}]$$
+Thus the unit of the scattering width is meters. With 1 meter">
+<meta property="og:updated_time" content="2017-04-20T17:04:04.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Install Spyder for Python">
-<meta name="twitter:description" content="Spyder is a the Scientific PYthon Development Environment， with an interface very similar to that of Matlab.
-Use the command
-1pip install spyder
-to install Spyder after the installation of Python envi">
+<meta name="twitter:title" content="Units of Radar Cross Section">
+<meta name="twitter:description" content="Scattering Width: Two-Dimensional Target$$\sigma_{2-D} = lim_{\rho\rightarrow\infty}[2\pi\rho\frac{|\mathrm{E}^s|^2}{|\mathrm{E}^i|^2}]$$
+Thus the unit of the scattering width is meters. With 1 meter">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Qiang" type="application/atom+xml">
   
@@ -72,10 +66,10 @@ to install Spyder after the installation of Python envi">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Spyder" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-RCS_units" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/25/Spyder/" class="article-date">
-  <time datetime="2017-03-25T19:38:39.709Z" itemprop="datePublished">2017-03-25</time>
+    <a href="/2017/04/20/RCS_units/" class="article-date">
+  <time datetime="2017-04-20T16:48:20.135Z" itemprop="datePublished">2017-04-20</time>
 </a>
     
   </div>
@@ -86,7 +80,7 @@ to install Spyder after the installation of Python envi">
         
   
     <h1 class="article-title" itemprop="name">
-      Install Spyder for Python
+      Units of Radar Cross Section
     </h1>
   
 
@@ -94,16 +88,18 @@ to install Spyder after the installation of Python envi">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Spyder is a the Scientific PYthon Development Environment， with an interface very similar to that of Matlab.</p>
-<p>Use the command</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install spyder</div></pre></td></tr></table></figure>
-<p>to install Spyder after the installation of Python environment.</p>
-<p>However, the <code>Spyder</code> can’t be launched successfully. Instead, <code>Anaconda</code> is installed since it comes with <code>Spyder</code> and many modules like <code>numpy</code> and <code>matplotlib</code> can be installed automatically.</p>
+        <h1 id="Scattering-Width-Two-Dimensional-Target"><a href="#Scattering-Width-Two-Dimensional-Target" class="headerlink" title="Scattering Width: Two-Dimensional Target"></a>Scattering Width: Two-Dimensional Target</h1><p>$$\sigma_{2-D} = lim_{\rho\rightarrow\infty}[2\pi\rho\frac{|\mathrm{E}^s|^2}{|\mathrm{E}^i|^2}]$$</p>
+<p>Thus the unit of the scattering width is meters. With 1 meter as the reference, the dB/meter is defined as</p>
+<p>$$\sigma(dB/meter)=10log(\frac{\sigma_{2-D}}{1 meter})$$</p>
+<p>The scattering width can also be normalize to the wavelength $\lambda$, which is in meters.</p>
+<p>$$\sigma(dB/\lambda)=10log(\frac{\sigma_{2-D}}{\lambda})$$</p>
+<h1 id="Radar-Cross-Section-Three-Dimensional-Target"><a href="#Radar-Cross-Section-Three-Dimensional-Target" class="headerlink" title="Radar Cross Section: Three-Dimensional Target"></a>Radar Cross Section: Three-Dimensional Target</h1><p>$$\sigma_{3-D} = lim_{r\rightarrow\infty}[4\pi{r^2}\frac{|\mathrm{E}^s|^2}{|\mathrm{E}^i|^2}]$$</p>
+<p>$$\sigma(dB/sm)=10log(\frac{\sigma_{3-D}}{1 m^2})$$</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/25/Spyder/" data-id="cj1qnq36s00045klavxl21w24" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/20/RCS_units/" data-id="cj1qnq36v00055klax1uex06o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -112,19 +108,10 @@ to install Spyder after the installation of Python envi">
     
 <nav id="article-nav">
   
-    <a href="/2017/04/20/RCS_units/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Units of Radar Cross Section
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/22/Maxwell/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/25/Spyder/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Maxwell equations</div>
+      <div class="article-nav-title">Install Spyder for Python</div>
     </a>
   
 </nav>
@@ -216,6 +203,23 @@ to install Spyder after the installation of Python envi">
 
 <script src="/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
