@@ -1,4 +1,310 @@
-<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Weekly-Contest-147 | Infinity-Eternity</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Weekly-Contest-147</h1><a id="logo" href="/.">Infinity-Eternity</a><p class="description">Blog of Qiang</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Weekly-Contest-147</h1><div class="post-meta">Jul 28, 2019</div><div class="post-content"><h3 id="N-th-Tribonacci-Number"><a href="#N-th-Tribonacci-Number" class="headerlink" title="N-th Tribonacci Number"></a>N-th Tribonacci Number</h3><p>Trivial</p>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="dp,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Solved the first two">
+<meta name="keywords" content="dp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly-Contest-147">
+<meta property="og:url" content="https://qli14.github.io/2019/07/28/Weekly-Contest-147/index.html">
+<meta property="og:site_name" content="Infinity-Eternity">
+<meta property="og:description" content="Solved the first two">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-02T21:45:46.158Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Weekly-Contest-147">
+<meta name="twitter:description" content="Solved the first two">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://qli14.github.io/2019/07/28/Weekly-Contest-147/">
+
+
+
+
+
+  <title>Weekly-Contest-147 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Infinity-Eternity</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Blog of Qiang</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/07/28/Weekly-Contest-147/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="For the people">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Infinity-Eternity">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Weekly-Contest-147</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-28T11:36:02-05:00">
+                2019-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  Solved the first two
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="N-th-Tribonacci-Number"><a href="#N-th-Tribonacci-Number" class="headerlink" title="N-th Tribonacci Number"></a>N-th Tribonacci Number</h3><p>Trivial</p>
 <h3 id="Alphabet-Board-Path"><a href="#Alphabet-Board-Path" class="headerlink" title="Alphabet Board Path"></a>Alphabet Board Path</h3><p>Trivial</p>
 <h3 id="1139-Largest-1-bordered-Square"><a href="#1139-Largest-1-bordered-Square" class="headerlink" title="1139. Largest 1-bordered Square"></a>1139. Largest 1-bordered Square</h3><p><a href="https://leetcode.com/problems/largest-1-bordered-square/discuss/345233/JavaC%2B%2BPython-Straight-Forward" target="_blank" rel="noopener">lee215</a><br>Track the number of continuous 1s along the rows and columns. Then loop over the side length in the descending order to find the largest side length. The number of elements is the square of the side length.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">largest1BorderedSquare</span><span class="params">(self, grid)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type grid: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment"># For the element at (i, j)</span></span><br><span class="line">        <span class="comment"># top[i][j]: the number of continous 1s from top</span></span><br><span class="line">        <span class="comment">#       top is initialized to be grid first</span></span><br><span class="line">        <span class="comment">#       if i &gt; 0 and top[i][j] == 1:</span></span><br><span class="line">        <span class="comment">#               top[i][j] = top[i-1][j] + 1</span></span><br><span class="line">        <span class="comment"># left[i][j]: the number of continous 1s from left</span></span><br><span class="line">        <span class="comment">#       left is initialized to be grid first</span></span><br><span class="line">        <span class="comment">#       if j &gt; 0 and left[i][j] == 1:</span></span><br><span class="line">        <span class="comment">#               left[i][j] = left[i][j-1] + 1</span></span><br><span class="line">        </span><br><span class="line">        top = [a[:] <span class="keyword">for</span> a <span class="keyword">in</span> grid]</span><br><span class="line">        left = [a[:] <span class="keyword">for</span> a <span class="keyword">in</span> grid] <span class="comment"># can't do left = grid since the original grid would be changed when updating left and top</span></span><br><span class="line">        m = len(grid)</span><br><span class="line">        n = len(grid[<span class="number">0</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">                <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> top[i][j] == <span class="number">1</span>:</span><br><span class="line">                    top[i][j] = top[i<span class="number">-1</span>][j] + <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> left[i][j] == <span class="number">1</span>:</span><br><span class="line">                    left[i][j] = left[i][j<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line">        <span class="comment"># print(top, left)</span></span><br><span class="line">        <span class="comment"># The largest possible side length is min(m, n)</span></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> range(min(m, n), <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="comment"># try to find the square with side length r</span></span><br><span class="line">            <span class="comment"># starting position (upper left corner)</span></span><br><span class="line">            <span class="comment"># is (i, j)</span></span><br><span class="line">            <span class="comment"># lower right position is then</span></span><br><span class="line">            <span class="comment"># (i + r - 1, j + r -1)</span></span><br><span class="line">            <span class="comment"># i + r - 1 &lt; m =&gt; i &lt; m - r + 1</span></span><br><span class="line">            <span class="comment"># j + r - 1 &lt; n =&gt; j &lt; n - r + 1</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(m - r + <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> range(n - r + <span class="number">1</span>):</span><br><span class="line">                    <span class="comment"># see if (i, j) satisfy the condition</span></span><br><span class="line">                    <span class="keyword">if</span> top[i + r - <span class="number">1</span>][j] &gt;= r <span class="keyword">and</span> top[i + r - <span class="number">1</span>][j + r - <span class="number">1</span>] &gt;= r <span class="keyword">and</span> left[i][j + r - <span class="number">1</span>] &gt;= r <span class="keyword">and</span> left[i + r - <span class="number">1</span>][j + r - <span class="number">1</span>] &gt;= r:</span><br><span class="line">                        <span class="keyword">return</span> r * r</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
@@ -25,7 +331,392 @@
 <p>What if the number of piles is odd? 2d DP.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stoneGame</span><span class="params">(self, piles)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type piles: List[int]</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        n = len(piles)</span><br><span class="line">        </span><br><span class="line">        dp = [[<span class="number">0</span>] * n <span class="keyword">for</span> _ <span class="keyword">in</span> range(n)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            dp[i][i] = piles[i]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> step <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(n-step):</span><br><span class="line">                temp1 = piles[i] - dp[i+<span class="number">1</span>][i+step]</span><br><span class="line">                temp2 = piles[i+step] - dp[i][i+step<span class="number">-1</span>]</span><br><span class="line">                dp[i][i+step] = max(temp1, temp2)</span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>][n<span class="number">-1</span>] &gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <p>With 1d DP, we just need to overwrite the diagonal <code>dp[c][c]</code>.    Thus the space complexity is $O(N)$.</p>
-</div><div class="tags"><a href="/tags/dp/">dp</a></div><div class="post-nav"><a class="pre" href="/2019/08/03/Weekly-Contest-148/">Weekly-Contest-148</a><a class="next" href="/2019/07/22/DFS-and-BFS/">DFS and BFS</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://qli14.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/BFS/" style="font-size: 15px;">BFS</a> <a href="/tags/Comsol/" style="font-size: 15px;">Comsol</a> <a href="/tags/Electromagnetics/" style="font-size: 15px;">Electromagnetics</a> <a href="/tags/Comsol-Mie-theory/" style="font-size: 15px;">Comsol, Mie theory</a> <a href="/tags/Hexo-tutorial/" style="font-size: 15px;">Hexo tutorial</a> <a href="/tags/Bit-Manipulation-Dynamic-Programming/" style="font-size: 15px;">Bit Manipulation, Dynamic Programming</a> <a href="/tags/cmd/" style="font-size: 15px;">cmd</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/dp/" style="font-size: 15px;">dp</a> <a href="/tags/DP/" style="font-size: 15px;">DP</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/11/09/Weekly-Contest-162/">Weekly Contest 162</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/07/Weekly-Contest-161/">Weekly Contest 161</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/06/Biweekly-contest-12/">Biweekly contest 12</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/28/Weekly-Contest-160/">Weekly Contest 160</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/19/Weekly-Contest-159/">Weekly Contest 159</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/19/Biweekly-Contest-11/">Biweekly Contest 11</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/17/883-Max-consecutive-ones-II/">883 Max consecutive ones II</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/13/Weekly-Contest-158/">Weekly Contest 158</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/07/Weekly-Contest-157/">Weekly Contest 157</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/07/Biweekly-contest-10/">Biweekly contest 10</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">Infinity-Eternity.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/x-mathjax-config">MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/dp/" rel="tag"># dp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/22/DFS-and-BFS/" rel="next" title="DFS and BFS">
+                <i class="fa fa-chevron-left"></i> DFS and BFS
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/03/Weekly-Contest-148/" rel="prev" title="Weekly-Contest-148">
+                Weekly-Contest-148 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">For the people</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#N-th-Tribonacci-Number"><span class="nav-number">1.</span> <span class="nav-text">N-th Tribonacci Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Alphabet-Board-Path"><span class="nav-number">2.</span> <span class="nav-text">Alphabet Board Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1139-Largest-1-bordered-Square"><span class="nav-number">3.</span> <span class="nav-text">1139. Largest 1-bordered Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stone-Game-II"><span class="nav-number">4.</span> <span class="nav-text">Stone Game II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convert-to-base-negative-2"><span class="nav-number">5.</span> <span class="nav-text">Convert to base negative 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#877-Stone-Game-I"><span class="nav-number">6.</span> <span class="nav-text">877. Stone Game I</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">For the people</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
   });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
