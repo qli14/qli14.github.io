@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Solved the first one. TLE on the second one. No idea about the rest two.">
+<meta name="description" content="A note about next-greater-element type problems">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Weekly Contest 149">
-<meta property="og:url" content="https://qli14.github.io/2019/08/12/Weekly-Contest-149/index.html">
+<meta property="og:title" content="Next greater element (stack)">
+<meta property="og:url" content="https://qli14.github.io/2019/11/10/Next-greater-element/index.html">
 <meta property="og:site_name" content="Infinity-Eternity">
-<meta property="og:description" content="Solved the first one. TLE on the second one. No idea about the rest two.">
+<meta property="og:description" content="A note about next-greater-element type problems">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-16T16:40:37.955Z">
+<meta property="og:updated_time" content="2019-11-13T16:57:11.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weekly Contest 149">
-<meta name="twitter:description" content="Solved the first one. TLE on the second one. No idea about the rest two.">
+<meta name="twitter:title" content="Next greater element (stack)">
+<meta name="twitter:description" content="A note about next-greater-element type problems">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://qli14.github.io/2019/08/12/Weekly-Contest-149/">
+  <link rel="canonical" href="https://qli14.github.io/2019/11/10/Next-greater-element/">
 
 
 
 
 
-  <title>Weekly Contest 149 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Next greater element (stack) | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/08/12/Weekly-Contest-149/">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/11/10/Next-greater-element/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="For the people">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Weekly Contest 149</h1>
+          <h1 class="post-title" itemprop="name headline">Next greater element (stack)</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T11:16:59-05:00">
-                2019-08-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-10T16:04:43-06:00">
+                2019-11-10
               </time>
             
 
@@ -286,7 +286,7 @@
 
           
               <div class="post-description">
-                  Solved the first one. TLE on the second one. No idea about the rest two.
+                  A note about next-greater-element type problems
               </div>
           
 
@@ -303,13 +303,23 @@
       
 
       
-        <h3 id="1154-Day-of-the-year"><a href="#1154-Day-of-the-year" class="headerlink" title="1154. Day of the year"></a>1154. Day of the year</h3><p>Only need to be careful about the leap year.</p>
-<h3 id="1155-Number-of-Dice-Rolls-With-Target-Sum"><a href="#1155-Number-of-Dice-Rolls-With-Target-Sum" class="headerlink" title="1155. Number of Dice Rolls With Target Sum"></a>1155. Number of Dice Rolls With Target Sum</h3><p>Tried with back tracking first, but TLE. This is a typical problem of dp.</p>
-<p>Similar questions are </p>
-<p><strong>322. Coin Change</strong></p>
-<p><strong>518. Coin Change 2</strong></p>
-<h3 id="1156-Swap-For-Longest-Repeated-Character-Substring"><a href="#1156-Swap-For-Longest-Repeated-Character-Substring" class="headerlink" title="1156. Swap For Longest Repeated Character Substring"></a>1156. Swap For Longest Repeated Character Substring</h3><p>Consider two groups of data. One is the occurrences of each element. The other is the consecutive occurrences. </p>
-<h3 id="1157-Online-Majority-Element-in-Subarray"><a href="#1157-Online-Majority-Element-in-Subarray" class="headerlink" title="1157. Online Majority Element in Subarray."></a>1157. Online Majority Element in Subarray.</h3><p>Studied <code>169 Majority element</code> first. The interesting Boyer-Moore majority vote algorithm.</p>
+        <p>The core idea is to maintain a stack with the rightmost element the next greater element of the current one.  <a href="https://leetcode.com/problems/online-stock-span/discuss/168311/C%2B%2BJavaPython-O(1" target="_blank" rel="noopener">lee215</a>)</p>
+<p>Monotone stack</p>
+<ul>
+<li>LC 901, Online stock span</li>
+<li>LC 1019, Next greater node in linked list</li>
+<li>LC 739, Daily temperatures</li>
+<li>LC 42, Trapping rain water</li>
+<li>LC 84, Largest rectangle in histogram</li>
+<li>LC 496, Next greater element I</li>
+<li>LC 503, Next Greater Element II</li>
+<li>LC 856, Score of parentheses. Can’t solved in the first try.</li>
+<li>LC 907, Sum of subarray minimums.<br>The key point is how to avoid duplicate counting.</li>
+<li>LC 1130, Minimum cost tree from leaf values.</li>
+<li>LC 828, Unique letter string</li>
+<li>LC 89, Sum of subsequence widths. A pure math problem</li>
+<li></li>
+</ul>
 
       
     </div>
@@ -334,8 +344,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/06/Using-cmd/" rel="next" title="Using-cmd">
-                <i class="fa fa-chevron-left"></i> Using-cmd
+              <a href="/2019/11/10/Sliding-Window-Summary/" rel="next" title="Sliding Window Summary">
+                <i class="fa fa-chevron-left"></i> Sliding Window Summary
               </a>
             
           </div>
@@ -344,8 +354,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/18/Weekly-Contest-150/" rel="prev" title="Weekly Contest 150">
-                Weekly Contest 150 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/17/Biweekly-Contest-13/" rel="prev" title="Biweekly Contest 13">
+                Biweekly Contest 13 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -398,17 +408,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -459,22 +460,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1154-Day-of-the-year"><span class="nav-number">1.</span> <span class="nav-text">1154. Day of the year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1155-Number-of-Dice-Rolls-With-Target-Sum"><span class="nav-number">2.</span> <span class="nav-text">1155. Number of Dice Rolls With Target Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1156-Swap-For-Longest-Repeated-Character-Substring"><span class="nav-number">3.</span> <span class="nav-text">1156. Swap For Longest Repeated Character Substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1157-Online-Majority-Element-in-Subarray"><span class="nav-number">4.</span> <span class="nav-text">1157. Online Majority Element in Subarray.</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

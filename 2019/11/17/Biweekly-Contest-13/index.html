@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Solved the first one. TLE on the second one. No idea about the rest two.">
+<meta name="description" content="(2/4) Stuck in the third problem. Tried to obtain the connected component with dfs.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Weekly Contest 149">
-<meta property="og:url" content="https://qli14.github.io/2019/08/12/Weekly-Contest-149/index.html">
+<meta property="og:title" content="Biweekly Contest 13">
+<meta property="og:url" content="https://qli14.github.io/2019/11/17/Biweekly-Contest-13/index.html">
 <meta property="og:site_name" content="Infinity-Eternity">
-<meta property="og:description" content="Solved the first one. TLE on the second one. No idea about the rest two.">
+<meta property="og:description" content="(2/4) Stuck in the third problem. Tried to obtain the connected component with dfs.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-16T16:40:37.955Z">
+<meta property="og:updated_time" content="2019-11-17T15:02:31.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weekly Contest 149">
-<meta name="twitter:description" content="Solved the first one. TLE on the second one. No idea about the rest two.">
+<meta name="twitter:title" content="Biweekly Contest 13">
+<meta name="twitter:description" content="(2/4) Stuck in the third problem. Tried to obtain the connected component with dfs.">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://qli14.github.io/2019/08/12/Weekly-Contest-149/">
+  <link rel="canonical" href="https://qli14.github.io/2019/11/17/Biweekly-Contest-13/">
 
 
 
 
 
-  <title>Weekly Contest 149 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Biweekly Contest 13 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/08/12/Weekly-Contest-149/">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/11/17/Biweekly-Contest-13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="For the people">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Weekly Contest 149</h1>
+          <h1 class="post-title" itemprop="name headline">Biweekly Contest 13</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T11:16:59-05:00">
-                2019-08-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-17T08:30:11-06:00">
+                2019-11-17
               </time>
             
 
@@ -286,7 +286,7 @@
 
           
               <div class="post-description">
-                  Solved the first one. TLE on the second one. No idea about the rest two.
+                  (2/4) Stuck in the third problem. Tried to obtain the connected component with dfs.
               </div>
           
 
@@ -303,13 +303,11 @@
       
 
       
-        <h3 id="1154-Day-of-the-year"><a href="#1154-Day-of-the-year" class="headerlink" title="1154. Day of the year"></a>1154. Day of the year</h3><p>Only need to be careful about the leap year.</p>
-<h3 id="1155-Number-of-Dice-Rolls-With-Target-Sum"><a href="#1155-Number-of-Dice-Rolls-With-Target-Sum" class="headerlink" title="1155. Number of Dice Rolls With Target Sum"></a>1155. Number of Dice Rolls With Target Sum</h3><p>Tried with back tracking first, but TLE. This is a typical problem of dp.</p>
-<p>Similar questions are </p>
-<p><strong>322. Coin Change</strong></p>
-<p><strong>518. Coin Change 2</strong></p>
-<h3 id="1156-Swap-For-Longest-Repeated-Character-Substring"><a href="#1156-Swap-For-Longest-Repeated-Character-Substring" class="headerlink" title="1156. Swap For Longest Repeated Character Substring"></a>1156. Swap For Longest Repeated Character Substring</h3><p>Consider two groups of data. One is the occurrences of each element. The other is the consecutive occurrences. </p>
-<h3 id="1157-Online-Majority-Element-in-Subarray"><a href="#1157-Online-Majority-Element-in-Subarray" class="headerlink" title="1157. Online Majority Element in Subarray."></a>1157. Online Majority Element in Subarray.</h3><p>Studied <code>169 Majority element</code> first. The interesting Boyer-Moore majority vote algorithm.</p>
+        <h3 id="1256-Encode-Number"><a href="#1256-Encode-Number" class="headerlink" title="1256. Encode Number"></a>1256. Encode Number</h3><p>My observation is that <code>f(n)</code> is obtained by setting <code>f(2^m - 1)</code> to ‘0’ * m, followed by the addition of <code>n - (2^m - 1)</code>. Note that the leading zeros are kept. Thus the result is a string with length <code>m</code>.</p>
+<h3 id="1257-Smallest-common-region"><a href="#1257-Smallest-common-region" class="headerlink" title="1257. Smallest common region"></a>1257. Smallest common region</h3><p>This problem is to find the lowest common ancestor (LCA) of two given node in N-ary tree. The main difference is that we can access the parent of a node in this problem. So my idea is to find the path to the root for each given node and then find the LCA from the root.</p>
+<h3 id="1258-Synonymous-Sentences"><a href="#1258-Synonymous-Sentences" class="headerlink" title="1258. Synonymous Sentences"></a>1258. Synonymous Sentences</h3><p>I got the idea of find all the equivalents and sort them, but was stuck in obtaining the connected components with dfs. </p>
+<h4 id="Method-1-Union-find"><a href="#Method-1-Union-find" class="headerlink" title="Method 1. Union-find."></a>Method 1. Union-find.</h4><p>Then all the synonyms of a word can be accessed through its root. All the rest is just a typical back tracking process.</p>
+<h4 id="Method-2-BFS"><a href="#Method-2-BFS" class="headerlink" title="Method 2. BFS"></a>Method 2. BFS</h4><h4 id="Method-3-DFS"><a href="#Method-3-DFS" class="headerlink" title="Method 3. DFS"></a>Method 3. DFS</h4><h3 id="1259-Handshakes-That-Don’t-Cross"><a href="#1259-Handshakes-That-Don’t-Cross" class="headerlink" title="1259. Handshakes That Don’t Cross"></a>1259. Handshakes That Don’t Cross</h3><p>Didn’t have time to try. Feels like a dp problem.</p>
 
       
     </div>
@@ -334,8 +332,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/06/Using-cmd/" rel="next" title="Using-cmd">
-                <i class="fa fa-chevron-left"></i> Using-cmd
+              <a href="/2019/11/10/Next-greater-element/" rel="next" title="Next greater element (stack)">
+                <i class="fa fa-chevron-left"></i> Next greater element (stack)
               </a>
             
           </div>
@@ -344,8 +342,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/18/Weekly-Contest-150/" rel="prev" title="Weekly Contest 150">
-                Weekly Contest 150 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/17/Weekly-Contest-163/" rel="prev" title="Weekly Contest 163">
+                Weekly Contest 163 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -469,7 +467,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1154-Day-of-the-year"><span class="nav-number">1.</span> <span class="nav-text">1154. Day of the year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1155-Number-of-Dice-Rolls-With-Target-Sum"><span class="nav-number">2.</span> <span class="nav-text">1155. Number of Dice Rolls With Target Sum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1156-Swap-For-Longest-Repeated-Character-Substring"><span class="nav-number">3.</span> <span class="nav-text">1156. Swap For Longest Repeated Character Substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1157-Online-Majority-Element-in-Subarray"><span class="nav-number">4.</span> <span class="nav-text">1157. Online Majority Element in Subarray.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1256-Encode-Number"><span class="nav-number">1.</span> <span class="nav-text">1256. Encode Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1257-Smallest-common-region"><span class="nav-number">2.</span> <span class="nav-text">1257. Smallest common region</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1258-Synonymous-Sentences"><span class="nav-number">3.</span> <span class="nav-text">1258. Synonymous Sentences</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-1-Union-find"><span class="nav-number">3.1.</span> <span class="nav-text">Method 1. Union-find.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-2-BFS"><span class="nav-number">3.2.</span> <span class="nav-text">Method 2. BFS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-3-DFS"><span class="nav-number">3.3.</span> <span class="nav-text">Method 3. DFS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1259-Handshakes-That-Don’t-Cross"><span class="nav-number">4.</span> <span class="nav-text">1259. Handshakes That Don’t Cross</span></a></li></ol></div>
             
 
           </div>
