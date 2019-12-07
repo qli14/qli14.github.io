@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="For the first time I could solve three problems. TLE on the last one.">
+<meta name="description" content="(2/4) Stuck in the third problem with TLE. I used a similar question about counting the number of sub matrices with target sum as a reference. The time complexity is O(N^3), while the expected time co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Weekly Contest 156">
-<meta property="og:url" content="https://qli14.github.io/2019/09/28/Weekly-Contest-156/index.html">
+<meta property="og:title" content="Weekly Contest 165">
+<meta property="og:url" content="https://qli14.github.io/2019/12/07/Weekly-Contest-165/index.html">
 <meta property="og:site_name" content="Infinity-Eternity">
-<meta property="og:description" content="For the first time I could solve three problems. TLE on the last one.">
+<meta property="og:description" content="(2/4) Stuck in the third problem with TLE. I used a similar question about counting the number of sub matrices with target sum as a reference. The time complexity is O(N^3), while the expected time co">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-10T18:03:54.509Z">
+<meta property="og:updated_time" content="2019-12-07T17:24:33.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Weekly Contest 156">
-<meta name="twitter:description" content="For the first time I could solve three problems. TLE on the last one.">
+<meta name="twitter:title" content="Weekly Contest 165">
+<meta name="twitter:description" content="(2/4) Stuck in the third problem with TLE. I used a similar question about counting the number of sub matrices with target sum as a reference. The time complexity is O(N^3), while the expected time co">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://qli14.github.io/2019/09/28/Weekly-Contest-156/">
+  <link rel="canonical" href="https://qli14.github.io/2019/12/07/Weekly-Contest-165/">
 
 
 
 
 
-  <title>Weekly Contest 156 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Weekly Contest 165 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/09/28/Weekly-Contest-156/">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/12/07/Weekly-Contest-165/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="For the people">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Weekly Contest 156</h1>
+          <h1 class="post-title" itemprop="name headline">Weekly Contest 165</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-28T23:13:43-05:00">
-                2019-09-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-07T11:16:07-06:00">
+                2019-12-07
               </time>
             
 
@@ -286,7 +286,7 @@
 
           
               <div class="post-description">
-                  For the first time I could solve three problems. TLE on the last one.
+                  (2/4) Stuck in the third problem with TLE. I used a similar question about counting the number of sub matrices with target sum as a reference. The time complexity is O(N^3), while the expected time compelxity is O(N^2). Didn't have time to try the last one.
               </div>
           
 
@@ -303,12 +303,11 @@
       
 
       
-        <h3 id="1207-Unique-number-of-occurrences"><a href="#1207-Unique-number-of-occurrences" class="headerlink" title="1207. Unique number of occurrences"></a>1207. Unique number of occurrences</h3><p>Check the duplicates in the frequencies</p>
-<h3 id="1208-Get-equal-substrings-within-budget"><a href="#1208-Get-equal-substrings-within-budget" class="headerlink" title="1208. Get equal substrings within budget"></a>1208. Get equal substrings within budget</h3><p>Sliding window.</p>
-<h3 id="1209-Remove-all-adjacent-duplicates-in-string-II"><a href="#1209-Remove-all-adjacent-duplicates-in-string-II" class="headerlink" title="1209. Remove all adjacent duplicates in string II"></a>1209. Remove all adjacent duplicates in string II</h3><p>Repeatedly find the intervals within which the substrings need to be removed.</p>
-<h3 id="5208-Minimum-moves-to-reach-target-with-rotations"><a href="#5208-Minimum-moves-to-reach-target-with-rotations" class="headerlink" title="5208. Minimum moves to reach target with rotations."></a>5208. Minimum moves to reach target with rotations.</h3><p>TLE.</p>
-<p>BFS method. Be careful about the visited status.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">minimumMoves</span><span class="params">(self, grid: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        <span class="comment"># BFS</span></span><br><span class="line">        n = len(grid)</span><br><span class="line">        levels = &#123;(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)&#125;</span><br><span class="line">        target = (n - <span class="number">1</span>, n - <span class="number">2</span>, n - <span class="number">1</span>, n - <span class="number">1</span>)</span><br><span class="line">        move = <span class="number">0</span></span><br><span class="line">        visited = set()</span><br><span class="line">        <span class="keyword">while</span> levels:</span><br><span class="line">            next_levels = set()</span><br><span class="line">            <span class="keyword">for</span> level <span class="keyword">in</span> levels:</span><br><span class="line">                r1, c1, r2, c2 = level</span><br><span class="line">                visited.add((r1, c1, r2, c2))</span><br><span class="line">                <span class="keyword">if</span> r1 == r2:</span><br><span class="line">                    <span class="keyword">if</span> c2 + <span class="number">1</span> &lt; n <span class="keyword">and</span> grid[r2][c2 + <span class="number">1</span>] == <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">if</span> (r2, c2, r2, c2 + <span class="number">1</span>) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                            next_levels.add((r2, c2, r2, c2 + <span class="number">1</span>))</span><br><span class="line">                    <span class="keyword">if</span> r1 + <span class="number">1</span> &lt; n <span class="keyword">and</span> grid[r1 + <span class="number">1</span>][c1] == <span class="number">0</span> <span class="keyword">and</span> grid[r2 + <span class="number">1</span>][c2] == <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">if</span> (r1 + <span class="number">1</span>, c1, r2 + <span class="number">1</span>, c2) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                            next_levels.add((r1 + <span class="number">1</span>, c1, r2 + <span class="number">1</span>, c2))</span><br><span class="line">                        <span class="keyword">if</span> (r1, c1, r1 + <span class="number">1</span>, c1) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                            next_levels.add((r1, c1, r1 + <span class="number">1</span>, c1))</span><br><span class="line">                <span class="keyword">if</span> c1 == c2:</span><br><span class="line">                    <span class="keyword">if</span> r2 + <span class="number">1</span> &lt; n <span class="keyword">and</span> grid[r2 + <span class="number">1</span>][c2] == <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">if</span> (r2, c2, r2 + <span class="number">1</span>, c2) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                            next_levels.add((r2, c2, r2 + <span class="number">1</span>, c2))</span><br><span class="line">                    <span class="keyword">if</span> c2 + <span class="number">1</span> &lt; n <span class="keyword">and</span> grid[r1][c1 + <span class="number">1</span>] == <span class="number">0</span> <span class="keyword">and</span> grid[r2][c2 + <span class="number">1</span>] == <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">if</span> (r1, c1 + <span class="number">1</span>, r2, c2 + <span class="number">1</span>) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                            next_levels.add((r1, c1 + <span class="number">1</span>, r2, c2 + <span class="number">1</span>))</span><br><span class="line">                        <span class="keyword">if</span> (r1, c1, r1, c1 + <span class="number">1</span>) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                            next_levels.add((r1, c1, r1, c1 + <span class="number">1</span>))</span><br><span class="line">            <span class="comment"># print(next_levels)</span></span><br><span class="line">            <span class="keyword">if</span> target <span class="keyword">in</span> next_levels:</span><br><span class="line">                <span class="keyword">return</span> move + <span class="number">1</span></span><br><span class="line">            levels = next_levels</span><br><span class="line">            move += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+        <h3 id="1275-Find-winner-on-a-tic-tac-toe-game"><a href="#1275-Find-winner-on-a-tic-tac-toe-game" class="headerlink" title="1275. Find winner on a tic tac toe game"></a>1275. Find winner on a tic tac toe game</h3><p>Record the number of stones in each row, each column, and two diagonals.</p>
+<h3 id="1276-Number-of-burgers-with-no-waste-of-ingredients"><a href="#1276-Number-of-burgers-with-no-waste-of-ingredients" class="headerlink" title="1276. Number of burgers with no waste of ingredients"></a>1276. Number of burgers with no waste of ingredients</h3><p>Quite trivial</p>
+<h3 id="1277-Count-square-submatrices-with-all-ones"><a href="#1277-Count-square-submatrices-with-all-ones" class="headerlink" title="1277. Count square submatrices with all ones"></a>1277. Count square submatrices with all ones</h3><p>I used the question about counting the number of submatrices with target sum as the reference.</p>
+<p>At first, I missed the condition of square submatrices and got TLE. Later, I couldn’t reduce the time complexity to $O(N^2)$.</p>
+<p>This is actually a dp problem by find the largest square with all ones with (i, j) as the upper left or bottom right corner. <a href="https://leetcode.com/problems/count-square-submatrices-with-all-ones/discuss/441306/Python-DP-solution" target="_blank" rel="noopener">lee215’s solution</a></p>
 
       
     </div>
@@ -333,8 +332,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/23/Weekly-Contest-155/" rel="next" title="Weekly Contest 155">
-                <i class="fa fa-chevron-left"></i> Weekly Contest 155
+              <a href="/2019/12/02/Biweekly-Contest-14/" rel="next" title="Biweekly Contest 14">
+                <i class="fa fa-chevron-left"></i> Biweekly Contest 14
               </a>
             
           </div>
@@ -342,10 +341,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/07/Biweekly-contest-10/" rel="prev" title="Biweekly contest 10">
-                Biweekly contest 10 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -468,7 +463,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1207-Unique-number-of-occurrences"><span class="nav-number">1.</span> <span class="nav-text">1207. Unique number of occurrences</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1208-Get-equal-substrings-within-budget"><span class="nav-number">2.</span> <span class="nav-text">1208. Get equal substrings within budget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1209-Remove-all-adjacent-duplicates-in-string-II"><span class="nav-number">3.</span> <span class="nav-text">1209. Remove all adjacent duplicates in string II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5208-Minimum-moves-to-reach-target-with-rotations"><span class="nav-number">4.</span> <span class="nav-text">5208. Minimum moves to reach target with rotations.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1275-Find-winner-on-a-tic-tac-toe-game"><span class="nav-number">1.</span> <span class="nav-text">1275. Find winner on a tic tac toe game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1276-Number-of-burgers-with-no-waste-of-ingredients"><span class="nav-number">2.</span> <span class="nav-text">1276. Number of burgers with no waste of ingredients</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1277-Count-square-submatrices-with-all-ones"><span class="nav-number">3.</span> <span class="nav-text">1277. Count square submatrices with all ones</span></a></li></ol></div>
             
 
           </div>
