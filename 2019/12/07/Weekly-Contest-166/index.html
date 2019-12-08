@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Prefix sum. A better solution is finding the longest subarray with at most one 0. 123456789101112131415161718192021222324252627282930313233343536373839404142def findMaxConsecutiveOnes(self, nums: List">
+<meta name="description" content="(4/4) The first two are quite trivial. The third one is a typical binary search quesiton. I was stuck in the last one for a while. Later I realized the size of the matrix is at most 3 by 3. Thus a bru">
 <meta property="og:type" content="article">
-<meta property="og:title" content="883 Max consecutive ones II">
-<meta property="og:url" content="https://qli14.github.io/2019/10/17/883-Max-consecutive-ones-II/index.html">
+<meta property="og:title" content="Weekly Contest 166">
+<meta property="og:url" content="https://qli14.github.io/2019/12/07/Weekly-Contest-166/index.html">
 <meta property="og:site_name" content="Infinity-Eternity">
-<meta property="og:description" content="Prefix sum. A better solution is finding the longest subarray with at most one 0. 123456789101112131415161718192021222324252627282930313233343536373839404142def findMaxConsecutiveOnes(self, nums: List">
+<meta property="og:description" content="(4/4) The first two are quite trivial. The third one is a typical binary search quesiton. I was stuck in the last one for a while. Later I realized the size of the matrix is at most 3 by 3. Thus a bru">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-17T20:56:10.513Z">
+<meta property="og:updated_time" content="2019-12-08T03:51:18.215Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="883 Max consecutive ones II">
-<meta name="twitter:description" content="Prefix sum. A better solution is finding the longest subarray with at most one 0. 123456789101112131415161718192021222324252627282930313233343536373839404142def findMaxConsecutiveOnes(self, nums: List">
+<meta name="twitter:title" content="Weekly Contest 166">
+<meta name="twitter:description" content="(4/4) The first two are quite trivial. The third one is a typical binary search quesiton. I was stuck in the last one for a while. Later I realized the size of the matrix is at most 3 by 3. Thus a bru">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://qli14.github.io/2019/10/17/883-Max-consecutive-ones-II/">
+  <link rel="canonical" href="https://qli14.github.io/2019/12/07/Weekly-Contest-166/">
 
 
 
 
 
-  <title>883 Max consecutive ones II | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Weekly Contest 166 | Infinity-Eternity</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/10/17/883-Max-consecutive-ones-II/">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/12/07/Weekly-Contest-166/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="For the people">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">883 Max consecutive ones II</h1>
+          <h1 class="post-title" itemprop="name headline">Weekly Contest 166</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-17T15:41:19-05:00">
-                2019-10-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-07T21:46:25-06:00">
+                2019-12-07
               </time>
             
 
@@ -285,6 +285,10 @@
           
 
           
+              <div class="post-description">
+                  (4/4) The first two are quite trivial. The third one is a typical binary search quesiton. I was stuck in the last one for a while. Later I realized the size of the matrix is at most 3 by 3. Thus a brute force searching is possible with back tracking. Finished the contest with around 1 hour.
+              </div>
+          
 
         </div>
       </header>
@@ -299,9 +303,9 @@
       
 
       
-        <p>Prefix sum.</p>
-<p>A better solution is finding the longest subarray with at most one 0.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="comment"># 883. Flip at most one 0</span></span><br><span class="line">        <span class="comment"># if nums[i] == 0 and it's flipped, the max consecutive ones is</span></span><br><span class="line">        <span class="comment">#   1 + end[i - 1] + start[i + 1]</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        n = len(nums)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># start[i] consecutive ones starting from i</span></span><br><span class="line">        <span class="comment"># end[i] consecutive ones ending in i</span></span><br><span class="line">        start = [<span class="number">0</span>] * n</span><br><span class="line">        end = [<span class="number">0</span>] * n</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> nums[<span class="number">-1</span>] == <span class="number">1</span>:</span><br><span class="line">            start[<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n - <span class="number">2</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == <span class="number">1</span>:</span><br><span class="line">                start[i] = <span class="number">1</span> + start[i + <span class="number">1</span>]</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">if</span> nums[<span class="number">0</span>] == <span class="number">1</span>:</span><br><span class="line">            end[<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == <span class="number">1</span>:</span><br><span class="line">                end[i] = <span class="number">1</span> + end[i - <span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># print(start, end)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == <span class="number">0</span>:</span><br><span class="line">                res = max(res, count)</span><br><span class="line">                count = <span class="number">0</span></span><br><span class="line">                </span><br><span class="line">                flip = <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> i - <span class="number">1</span> &gt;= <span class="number">0</span>:</span><br><span class="line">                    flip += end[i - <span class="number">1</span>]</span><br><span class="line">                <span class="keyword">if</span> i + <span class="number">1</span> &lt; n:</span><br><span class="line">                    flip += start[i + <span class="number">1</span>]</span><br><span class="line">                <span class="comment"># print(i, flip)</span></span><br><span class="line">                res = max(res, flip)</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+        <h3 id="1283-Find-the-smallest-divisor-given-a-threshold"><a href="#1283-Find-the-smallest-divisor-given-a-threshold" class="headerlink" title="1283. Find the smallest divisor given a threshold"></a>1283. Find the smallest divisor given a threshold</h3><p>Binary search. Similar to shipping weight, divide chocolate, etc.</p>
+<h3 id="1284-Minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix"><a href="#1284-Minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix" class="headerlink" title="1284. Minimum number of flips to convert binary matrix to zero matrix"></a>1284. Minimum number of flips to convert binary matrix to zero matrix</h3><p>Brute force searching with back tracking.</p>
+<p>Only need to count the number of flips for each elements. The number of flips must be even (odd) if the element is 0 (1).</p>
 
       
     </div>
@@ -326,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/13/Weekly-Contest-158/" rel="next" title="Weekly Contest 158">
-                <i class="fa fa-chevron-left"></i> Weekly Contest 158
+              <a href="/2019/12/07/Weekly-Contest-165/" rel="next" title="Weekly Contest 165">
+                <i class="fa fa-chevron-left"></i> Weekly Contest 165
               </a>
             
           </div>
@@ -335,10 +339,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/19/Biweekly-Contest-11/" rel="prev" title="Biweekly Contest 11">
-                Biweekly Contest 11 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -390,8 +390,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,6 +451,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1283-Find-the-smallest-divisor-given-a-threshold"><span class="nav-number">1.</span> <span class="nav-text">1283. Find the smallest divisor given a threshold</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1284-Minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix"><span class="nav-number">2.</span> <span class="nav-text">1284. Minimum number of flips to convert binary matrix to zero matrix</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
