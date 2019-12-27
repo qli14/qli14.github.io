@@ -1,5 +1,6 @@
 ---
 title: Units of Radar Cross Section
+date: 2017-12-23 17:35:53
 tags: Electromagnetics
 description: The units of radar cross section - normalized to wavelength or 1 meter
 mathjax: true
@@ -22,8 +23,6 @@ $$\sigma(dB/\lambda)=10log(\frac{\sigma_{2-D}}{\lambda})$$
 $$\sigma_{3-D} = lim_{r\rightarrow\infty}[4\pi{r^2}\frac{|\mathrm{E}^s|^2}{|\mathrm{E}^i|^2}]$$
 
 $$\sigma(dB/sm)=10log(\frac{\sigma_{3-D}}{1 m^2})$$
-
-
 
 
 
