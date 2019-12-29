@@ -2,6 +2,7 @@
 title: Use LaTeX in MarkdownPad with Typora
 mathjax: true
 description: Use LaTeX with MathJax
+date: 2019-01-01 00:00:00
 ---
 
 1. In the front matter, set `mathjax: true` in order to use mathjax for equation rendering.
