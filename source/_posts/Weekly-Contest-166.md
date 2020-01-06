@@ -19,3 +19,5 @@ One problem I encountered is passing a copy of the nested list into the back tra
 
 The assignment operator in Python doesn't create a new variable but shares the reference of the original object. [copy in Python](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) 
 
+(01/02/2020 update) Used the un-assignment curing back tracking to reduce the runtime by half.
+

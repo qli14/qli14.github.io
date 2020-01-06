@@ -32,3 +32,8 @@ In order to solve the problem,`hexo-math`is adopted to render the equations.
 1. `npm install hexo-math --save`
 2. `hexo math install`
 
+### Dec-30-2019 update
+
+Error after transferring the blog site to my new laptop. The equations can't be rendered correctly.
+
+A good solution is found [here](https://dxj1113.github.io/2017/07/14/%E5%A4%84%E7%90%86hexo%E4%B8%8Emathjax%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/). Uninstall the original package `hexo-renderer-marked`. Then install the new renderer `hexo-renderer-kramed`.
