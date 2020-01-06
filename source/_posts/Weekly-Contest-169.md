@@ -1,20 +1,13 @@
 ---
 title: Weekly Contest 169
-<<<<<<< HEAD
-date: 2019-12-30 13:22:16
-tags:
-description: (3/4) Back tracking used for the last one, but TLE. The key is starting the assignment from the least significant digit.
-mathjax: true
-=======
 date: 2019-12-28 22:29:57
-tags:
+tags: Leetcode
 description: (3/4 16.6%) I had around one hour for the last problem. Worked out a back tracking solution, but TLE. Later I realized that the assignment of letters should be from least significant digits to the most significant digits. If the digits in the left and right hand side don't match, there is not poiting in going forward.
->>>>>>> cd6f40f4cc6f8279dfd43b93a3a3cdfcfc6297fb
+mathjax: true
 ---
 
 ### 1307. Verbal arithmetic puzzle
 
-<<<<<<< HEAD
 During the contest, I tried a brute-force back-tracking for all possible combinations, but TLE. The time complexity is $O(n!)$, where $n$ is the number of distinct characters. 
 
 Later, I found a nice solution by [li-_-il](https://leetcode.com/problems/verbal-arithmetic-puzzle/discuss/463886/python-backtracking-efficient-column-wise-w-explanation/417569). The idea is following the addition in the vertical form. Starting from the least significant bit (LSB), try the assignment of each letter in each word and calculate the remainder and carry in the current digit. Compare the remainder with the value of the current digit in result. If the remainder has been assigned to other letters or the current digit in result has been assigned to other values, it's impossible to find a valid solution. Otherwise, assign the remainder to the current digit in result and continue.
@@ -75,6 +68,3 @@ class Solution:
         return solve(0, 0, 0)
         # follow-up: How to find all the possible solutions?
 ```
-
-=======
->>>>>>> cd6f40f4cc6f8279dfd43b93a3a3cdfcfc6297fb
