@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qli14.github.io","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Solved the first two">
+<meta name="keywords" content="dp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly-Contest-147">
+<meta property="og:url" content="https://qli14.github.io/2019/07/28/Weekly-Contest-147/index.html">
+<meta property="og:site_name" content="Infinity-Eternity">
+<meta property="og:description" content="Solved the first two">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-09T21:01:36.961Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Weekly-Contest-147">
+<meta name="twitter:description" content="Solved the first two">
+
+<link rel="canonical" href="https://qli14.github.io/2019/07/28/Weekly-Contest-147/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Weekly-Contest-147 | Infinity-Eternity</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Infinity-Eternity</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Blog of Qiang</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2019/07/28/Weekly-Contest-147/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="For the people">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Infinity-Eternity">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Weekly-Contest-147
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-28 11:36:02" itemprop="dateCreated datePublished" datetime="2019-07-28T11:36:02-04:00">2019-07-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-09 16:01:36" itemprop="dateModified" datetime="2020-02-09T16:01:36-05:00">2020-02-09</time>
+              </span>
+
+          
+            <div class="post-description">Solved the first two</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="N-th-Tribonacci-Number"><a href="#N-th-Tribonacci-Number" class="headerlink" title="N-th Tribonacci Number"></a>N-th Tribonacci Number</h3><p>Trivial</p>
+<h3 id="Alphabet-Board-Path"><a href="#Alphabet-Board-Path" class="headerlink" title="Alphabet Board Path"></a>Alphabet Board Path</h3><p>Trivial</p>
+<h3 id="1139-Largest-1-bordered-Square"><a href="#1139-Largest-1-bordered-Square" class="headerlink" title="1139. Largest 1-bordered Square"></a>1139. Largest 1-bordered Square</h3><p><a href="https://leetcode.com/problems/largest-1-bordered-square/discuss/345233/JavaC%2B%2BPython-Straight-Forward" target="_blank" rel="noopener">lee215</a><br>Track the number of continuous 1s along the rows and columns. Then loop over the side length in the descending order to find the largest side length. The number of elements is the square of the side length.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">largest1BorderedSquare</span><span class="params">(self, grid)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type grid: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment"># For the element at (i, j)</span></span><br><span class="line">        <span class="comment"># top[i][j]: the number of continous 1s from top</span></span><br><span class="line">        <span class="comment">#       top is initialized to be grid first</span></span><br><span class="line">        <span class="comment">#       if i &gt; 0 and top[i][j] == 1:</span></span><br><span class="line">        <span class="comment">#               top[i][j] = top[i-1][j] + 1</span></span><br><span class="line">        <span class="comment"># left[i][j]: the number of continous 1s from left</span></span><br><span class="line">        <span class="comment">#       left is initialized to be grid first</span></span><br><span class="line">        <span class="comment">#       if j &gt; 0 and left[i][j] == 1:</span></span><br><span class="line">        <span class="comment">#               left[i][j] = left[i][j-1] + 1</span></span><br><span class="line">        </span><br><span class="line">        top = [a[:] <span class="keyword">for</span> a <span class="keyword">in</span> grid]</span><br><span class="line">        left = [a[:] <span class="keyword">for</span> a <span class="keyword">in</span> grid] <span class="comment"># can't do left = grid since the original grid would be changed when updating left and top</span></span><br><span class="line">        m = len(grid)</span><br><span class="line">        n = len(grid[<span class="number">0</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">                <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> top[i][j] == <span class="number">1</span>:</span><br><span class="line">                    top[i][j] = top[i<span class="number">-1</span>][j] + <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> left[i][j] == <span class="number">1</span>:</span><br><span class="line">                    left[i][j] = left[i][j<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line">        <span class="comment"># print(top, left)</span></span><br><span class="line">        <span class="comment"># The largest possible side length is min(m, n)</span></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> range(min(m, n), <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="comment"># try to find the square with side length r</span></span><br><span class="line">            <span class="comment"># starting position (upper left corner)</span></span><br><span class="line">            <span class="comment"># is (i, j)</span></span><br><span class="line">            <span class="comment"># lower right position is then</span></span><br><span class="line">            <span class="comment"># (i + r - 1, j + r -1)</span></span><br><span class="line">            <span class="comment"># i + r - 1 &lt; m =&gt; i &lt; m - r + 1</span></span><br><span class="line">            <span class="comment"># j + r - 1 &lt; n =&gt; j &lt; n - r + 1</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(m - r + <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> range(n - r + <span class="number">1</span>):</span><br><span class="line">                    <span class="comment"># see if (i, j) satisfy the condition</span></span><br><span class="line">                    <span class="keyword">if</span> top[i + r - <span class="number">1</span>][j] &gt;= r <span class="keyword">and</span> top[i + r - <span class="number">1</span>][j + r - <span class="number">1</span>] &gt;= r <span class="keyword">and</span> left[i][j + r - <span class="number">1</span>] &gt;= r <span class="keyword">and</span> left[i + r - <span class="number">1</span>][j + r - <span class="number">1</span>] &gt;= r:</span><br><span class="line">                        <span class="keyword">return</span> r * r</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> When initializing  <code>top</code> and <code>left</code>, it must be <code>a[:]</code> instead of <code>a</code>, otherwise, it just copies the reference to the list, rather than the actual list.</p>
+<p><strong>Similar problem</strong> 221. Maximal Square.</p>
+<p>I tried with a similar method to count the number of continuous 1s, but TLE. Also, be careful about the indexing of 2D list. For example, </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]]</span><br><span class="line">print(A[<span class="number">0</span>:<span class="number">2</span>][<span class="number">2</span>])</span><br><span class="line">    <span class="comment"># The result is 'list index out of range'</span></span><br><span class="line"><span class="comment"># A[0:2] gives [[1, 2, 3], [4, 5, 6]]</span></span><br><span class="line"><span class="comment"># in order to get the second column of the first two rows</span></span><br><span class="line">print([a[<span class="number">1</span>] <span class="keyword">for</span> a <span class="keyword">in</span> A[<span class="number">0</span>:<span class="number">2</span>]])</span><br><span class="line">	<span class="comment"># The result is [2, 5]</span></span><br></pre></td></tr></table></figure>
+<p>Still this problem can be solved with dp, with the <code>dp[i][j]</code> representing the largest side length form (0, 0) to (i, j).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">maximalSquare</span><span class="params">(self, matrix)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type matrix: List[List[str]]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        m = len(matrix)</span><br><span class="line">        <span class="keyword">if</span> m == <span class="number">0</span>: <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        n = len(matrix[<span class="number">0</span>])</span><br><span class="line">        </span><br><span class="line">        dp = [[<span class="number">0</span>] * n <span class="keyword">for</span> _ <span class="keyword">in</span> range(m)]</span><br><span class="line">        </span><br><span class="line">        best = <span class="number">0</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n):</span><br><span class="line">                <span class="keyword">if</span> i == <span class="number">0</span>: dp[<span class="number">0</span>][j] = int(matrix[<span class="number">0</span>][j])</span><br><span class="line">                <span class="keyword">if</span> j == <span class="number">0</span>: dp[i][<span class="number">0</span>] = int(matrix[i][<span class="number">0</span>])</span><br><span class="line">                <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> matrix[i][j] == <span class="string">'1'</span>:</span><br><span class="line">                    dp[i][j] = min(dp[i<span class="number">-1</span>][j], dp[i<span class="number">-1</span>][j<span class="number">-1</span>], dp[i][j<span class="number">-1</span>]) + <span class="number">1</span></span><br><span class="line">                best = max(best, dp[i][j])</span><br><span class="line">        <span class="keyword">return</span> best * best</span><br></pre></td></tr></table></figure>
+<h3 id="Stone-Game-II"><a href="#Stone-Game-II" class="headerlink" title="Stone Game II"></a>Stone Game II</h3><p>DFS.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stoneGameII</span><span class="params">(self, piles)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type piles: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        n = len(piles)</span><br><span class="line">        dict1 = &#123;&#125;</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(i, M)</span>:</span></span><br><span class="line">            <span class="comment"># starting from index i and 1 &lt;= X &lt;= 2M</span></span><br><span class="line">            <span class="comment"># return the difference in the number of stones</span></span><br><span class="line">            <span class="comment"># between the first player and the second player</span></span><br><span class="line">            <span class="comment"># if both players play properly.</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># player1 - player2 = dfs(0, 1)</span></span><br><span class="line">            <span class="comment"># player1 + player2 = sum(piles)</span></span><br><span class="line">            <span class="comment"># player1 = (sum(piles) + dfs(0, 1)) / 2</span></span><br><span class="line">            <span class="keyword">if</span> (i, M) <span class="keyword">in</span> dict1: <span class="keyword">return</span> dict1[i, M]</span><br><span class="line">            best = float(<span class="string">'-inf'</span>)</span><br><span class="line">            <span class="comment"># best = 0</span></span><br><span class="line">            <span class="keyword">if</span> i == n:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            <span class="keyword">if</span> i + <span class="number">2</span> * M &gt;= n: <span class="comment"># take all if the number of remaining piles is less than 2M</span></span><br><span class="line">                <span class="keyword">return</span> sum(piles[i:])</span><br><span class="line">            <span class="keyword">for</span> X <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">2</span> * M + <span class="number">1</span>):</span><br><span class="line">                <span class="comment"># print(i, X, M)</span></span><br><span class="line">                best = max(best, sum(piles[i:i+X]) - dfs(i+X, max(M, X)))</span><br><span class="line">            dict1[i, M] = best</span><br><span class="line">            <span class="keyword">return</span> best</span><br><span class="line">        <span class="keyword">return</span> (sum(piles) + dfs(<span class="number">0</span>, <span class="number">1</span>)) / <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Note 1:</strong> <code>best</code> must be initialized to <code>-inf</code> since the score returned by <code>dfs(i, M)</code> could be a negative number. That is to say, the player taking stone first is not guaranteed to win.</p>
+<p><strong>Note 2:</strong> Use a dictionary to store the returned value of <code>(i, M)</code> to avoid repeated calling of <code>dfs(i, M)</code>.</p>
+<h3 id="Convert-to-base-negative-2"><a href="#Convert-to-base-negative-2" class="headerlink" title="Convert to base negative 2"></a>Convert to base negative 2</h3><p>Use the series expansion. In general, the base can be 2 or -2.</p>
+<script type="math/tex; mode=display">N = \sum_{i=0}^{m} a[i]b^i</script><p>in which $N$ is the input number to be converted, $a[i]$ is the $i$th digit of the final result, and $b=\pm 2$ is the base. The problem is converted to find the coefficients $a[i]$.</p>
+<script type="math/tex; mode=display">N = a[0]+\sum_{i=1}^{m} a[i]b^i</script><p>So that $a[0] = N \% b$ and $N$ is updated as</p>
+<script type="math/tex; mode=display">N=(N - a[0])/b=\sum_{i=1}^{m} a[i]b^{i-1}=a[1] + \sum_{i=2}^{m} a[i]b^{i-1}</script><p>Similarly, $a[1] = N\%b$ and $N$ is updated as </p>
+<script type="math/tex; mode=display">N = (N-a[1])/b</script><p>All the coefficients can be calculated by repeating the above two steps.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">baseNeg2</span><span class="params">(self, N: int)</span> -&gt; str:</span></span><br><span class="line">        <span class="comment"># How to convert a number to base +2</span></span><br><span class="line">        <span class="keyword">if</span> N == <span class="number">0</span>: <span class="keyword">return</span> <span class="string">"0"</span></span><br><span class="line">        res = <span class="string">''</span></span><br><span class="line">        curr = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> N != <span class="number">0</span>:</span><br><span class="line">            curr = N % <span class="number">2</span></span><br><span class="line">            N = (N - curr) // (<span class="number">-2</span>)</span><br><span class="line">            res = str(curr) + res</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>With the bitwise operators (&amp;, ^) in Python, the modular operation can be replaced by<code>N &amp; 1</code>. Similarly, the update operation $N=(N-a[i])/b$ can be replaced by <code>N &gt;&gt; 1</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">baseNeg2</span><span class="params">(self, N: int)</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> N == <span class="number">0</span> <span class="keyword">or</span> N == <span class="number">1</span>: <span class="keyword">return</span> str(N)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> self.baseNeg2(-(N &gt;&gt; <span class="number">1</span>)) + str(N &amp; <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="877-Stone-Game-I"><a href="#877-Stone-Game-I" class="headerlink" title="877. Stone Game I"></a>877. Stone Game I</h3><p>Always return true if the number of piles is even.</p>
+<p>What if the number of piles is odd? 2d DP.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stoneGame</span><span class="params">(self, piles)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type piles: List[int]</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        n = len(piles)</span><br><span class="line">        </span><br><span class="line">        dp = [[<span class="number">0</span>] * n <span class="keyword">for</span> _ <span class="keyword">in</span> range(n)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            dp[i][i] = piles[i]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> step <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(n-step):</span><br><span class="line">                temp1 = piles[i] - dp[i+<span class="number">1</span>][i+step]</span><br><span class="line">                temp2 = piles[i+step] - dp[i][i+step<span class="number">-1</span>]</span><br><span class="line">                dp[i][i+step] = max(temp1, temp2)</span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>][n<span class="number">-1</span>] &gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>With 1d DP, we just need to overwrite the diagonal <code>dp[c][c]</code>.    Thus the space complexity is $O(N)$.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/dp/" rel="tag"># dp</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/07/22/DFS-and-BFS/" rel="prev" title="DFS and BFS">
+      <i class="fa fa-chevron-left"></i> DFS and BFS
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/08/03/Weekly-Contest-148/" rel="next" title="Weekly-Contest-148">
+      Weekly-Contest-148 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#N-th-Tribonacci-Number"><span class="nav-number">1.</span> <span class="nav-text">N-th Tribonacci Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Alphabet-Board-Path"><span class="nav-number">2.</span> <span class="nav-text">Alphabet Board Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1139-Largest-1-bordered-Square"><span class="nav-number">3.</span> <span class="nav-text">1139. Largest 1-bordered Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stone-Game-II"><span class="nav-number">4.</span> <span class="nav-text">Stone Game II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convert-to-base-negative-2"><span class="nav-number">5.</span> <span class="nav-text">Convert to base negative 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#877-Stone-Game-I"><span class="nav-number">6.</span> <span class="nav-text">877. Stone Game I</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">For the people</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">For the people</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

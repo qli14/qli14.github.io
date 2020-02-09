@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qli14.github.io","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Calculate the scattering, absorption and extinction cross sections of gold nanospheres with different sizes embedded by media with different index with finite element method. The results are compared">
+<meta name="keywords" content="Comsol, Mie theory">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gold Nanoparticles  Mie theory and FEM Simulation">
+<meta property="og:url" content="https://qli14.github.io/2017/07/15/Gold-Nanoparticles-Mie-theory-and-FEM-Simulation/index.html">
+<meta property="og:site_name" content="Infinity-Eternity">
+<meta property="og:description" content="Calculate the scattering, absorption and extinction cross sections of gold nanospheres with different sizes embedded by media with different index with finite element method. The results are compared">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://qli14.github.io/2017/07/15/Gold-Nanoparticles-Mie-theory-and-FEM-Simulation/20170721-gold-nanoparticle-scattering-efficiency.svg">
+<meta property="og:updated_time" content="2020-02-09T21:01:36.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gold Nanoparticles  Mie theory and FEM Simulation">
+<meta name="twitter:description" content="Calculate the scattering, absorption and extinction cross sections of gold nanospheres with different sizes embedded by media with different index with finite element method. The results are compared">
+<meta name="twitter:image" content="https://qli14.github.io/2017/07/15/Gold-Nanoparticles-Mie-theory-and-FEM-Simulation/20170721-gold-nanoparticle-scattering-efficiency.svg">
+
+<link rel="canonical" href="https://qli14.github.io/2017/07/15/Gold-Nanoparticles-Mie-theory-and-FEM-Simulation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Gold Nanoparticles  Mie theory and FEM Simulation | Infinity-Eternity</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Infinity-Eternity</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Blog of Qiang</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://qli14.github.io/2017/07/15/Gold-Nanoparticles-Mie-theory-and-FEM-Simulation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="For the people">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Infinity-Eternity">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Gold Nanoparticles  Mie theory and FEM Simulation
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-07-15 11:21:52" itemprop="dateCreated datePublished" datetime="2017-07-15T11:21:52-04:00">2017-07-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-09 16:01:36" itemprop="dateModified" datetime="2020-02-09T16:01:36-05:00">2020-02-09</time>
+              </span>
+
+          
+            <div class="post-description">Calculate the scattering, absorption and extinction cross sections of gold nanospheres with different sizes embedded by media with different index with finite element method. The results are compared with that from Mie theory.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="Task-1-Derive-the-analytical-solution-Mie-theory"><a href="#Task-1-Derive-the-analytical-solution-Mie-theory" class="headerlink" title="Task 1. Derive the analytical solution (Mie theory)"></a>Task 1. Derive the analytical solution (Mie theory)</h4><ol>
+<li><p>A good tutorial is <a href="http://yingsamuelhu.blogspot.com/p/mie-theory-for-multilayer-spheres.html" target="_blank" rel="noopener">here</a>.</p>
+</li>
+<li><p>The classical textbook by Bohren and Huffman.</p>
+</li>
+</ol>
+<p><code>C. F. Bohren and D. R. Huffman, Absorption and Scattering of Light by Small Particles, 1998, vol. 1.</code></p>
+<ol>
+<li><p>The  extinction and scattering cross sections are</p>
+<script type="math/tex; mode=display">\sigma_{sca}=\frac{2 \pi}{\mathrm{k}^{2}} \sum_{n=1}^{\infty}(2 n+1)\left(\left|a_{n}\right|^{2}+\left|b_{n}\right|^{2}\right)</script><script type="math/tex; mode=display">\sigma_{e x t}=\frac{2 \pi}{\mathrm{k}^{2}} \operatorname{Re}\left(a_{n}+b_{n}\right)</script><p>The coefficients are</p>
+<script type="math/tex; mode=display">a_{n}=\frac{m \psi_{n}(m x) \psi_{n}^{\prime}(x)-\psi_{n}(x) \psi_{n}^{\prime}(m x)}{m \psi_{n}(m x) \xi_{n}^{\prime}(x)-\xi_{n}(x) \psi_{n}^{\prime}(m x)}</script><script type="math/tex; mode=display">b_{n}=\frac{\psi_{n}(m x) \psi_{n}^{\prime}(x)-m \psi_{n}(x) \psi_{n}^{\prime}(m x)}{\psi_{n}(m x) \xi_{n}^{\prime}(x)-m \xi_{n}(x) \psi_{n}^{\prime}(m x)}</script><p>in which $\psi$ and $\xi$ are Ricatti-Bessel functions of order $n$.</p>
+</li>
+</ol>
+<h4 id="Task-2-Calculate-the-scattering-and-absorption-cross-sections-in-Python"><a href="#Task-2-Calculate-the-scattering-and-absorption-cross-sections-in-Python" class="headerlink" title="Task 2. Calculate the scattering and absorption cross sections in Python"></a>Task 2. Calculate the scattering and absorption cross sections in Python</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">Created on Sun Jul 16 13:46:58 2017</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">@author: qli14</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> arange, pi, cos, real, imag, sqrt, genfromtxt</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.special <span class="keyword">import</span> spherical_jn, spherical_yn</span><br><span class="line"></span><br><span class="line">plt.close(<span class="string">'all'</span>)</span><br><span class="line">plt.rcdefaults()</span><br><span class="line">plt.rc(<span class="string">'font'</span>,**&#123;<span class="string">'family'</span>:<span class="string">'sans-serif'</span>,<span class="string">'sans-serif'</span>:[<span class="string">'Arial'</span>],<span class="string">'size'</span>:<span class="number">10</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">## Define the Riccati-Bessel function psi</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">psi</span><span class="params">(n,z)</span>:</span></span><br><span class="line">    y = z*spherical_jn(n,z)</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line"><span class="comment">## Define the derivative of psi</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dpsi</span><span class="params">(n,z)</span>:</span></span><br><span class="line">    y = spherical_jn(n,z)+z*spherical_jn(n,z,derivative=<span class="keyword">True</span>)</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line"><span class="comment">## Define the Riccati-Bessel function xi</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">xi</span><span class="params">(n,z)</span>:</span></span><br><span class="line">    y = z*(spherical_jn(n,z)+<span class="number">1j</span>*spherical_yn(n,z))</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line"><span class="comment">## Define the derivative of xi</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dxi</span><span class="params">(n,z)</span>:</span></span><br><span class="line">    y = spherical_jn(n,z)+z*spherical_jn(n,z,derivative=<span class="keyword">True</span>) \</span><br><span class="line">    +<span class="number">1j</span>*(spherical_yn(n,z)+z*spherical_yn(n,z,derivative=<span class="keyword">True</span>))</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line"></span><br><span class="line"><span class="comment">## Define the scattering coefficient an</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">an</span><span class="params">(n,m,x)</span>:</span></span><br><span class="line">    y = (m*psi(n,m*x)*dpsi(n,x)-psi(n,x)*dpsi(n,m*x)) \</span><br><span class="line">        /(m*psi(n,m*x)*dxi(n,x)-xi(n,x)*dpsi(n,m*x))</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line"><span class="comment">## Define the scattering coefficient bn</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bn</span><span class="params">(n,m,x)</span>:</span></span><br><span class="line">    y = (psi(n,m*x)*dpsi(n,x)-m*psi(n,x)*dpsi(n,m*x))  \</span><br><span class="line">        /(psi(n,m*x)*dxi(n,x)-m*xi(n,x)*dpsi(n,m*x))</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line"></span><br><span class="line"><span class="comment">## Import the complex refractive index of gold</span></span><br><span class="line">data = genfromtxt(<span class="string">'Johnson-gold-n-k.txt'</span>,delimiter=<span class="string">'\t'</span>,</span><br><span class="line">                  skip_header=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">wl = data[:,<span class="number">0</span>] <span class="comment"># wavelength in micrometer</span></span><br><span class="line">realn = data[:,<span class="number">1</span>] <span class="comment"># real part of the complex refractive index</span></span><br><span class="line">imagk = data[:,<span class="number">2</span>] <span class="comment"># imaginary part of the complex refractive index</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Wavelength in nanometer</span></span><br><span class="line">wl = wl*<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Permittivity of the sphere</span></span><br><span class="line">epsilon = (realn+<span class="number">1j</span>*imagk)**<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Refractive index of the medium in which the sphere is embedded</span></span><br><span class="line">ReIndex = <span class="number">1.33</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Radius of the sphere in nanometer</span></span><br><span class="line">radius = <span class="number">50</span></span><br><span class="line"></span><br><span class="line">x = <span class="number">2</span>*pi*ReIndex/wl*radius <span class="comment"># dimensionless</span></span><br><span class="line"></span><br><span class="line">m = sqrt(epsilon)/ReIndex</span><br><span class="line">        </span><br><span class="line"><span class="comment">## The number of iterations in the series</span></span><br><span class="line">iteration = <span class="number">40</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## The total extinction efficiency</span></span><br><span class="line">Qext = <span class="number">0.0</span></span><br><span class="line">Qsca = <span class="number">0.0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,iteration+<span class="number">1</span>):</span><br><span class="line">    Qext = Qext + <span class="number">2</span>/x**<span class="number">2</span>*(<span class="number">2</span>*n+<span class="number">1</span>)*real(an(n,m,x)+bn(n,m,x))</span><br><span class="line">    Qsca = Qsca + <span class="number">2</span>/x**<span class="number">2</span>*(<span class="number">2</span>*n+<span class="number">1</span>)*(abs(an(n,m,x))**<span class="number">2</span>+abs(bn(n,m,x))**<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">Qabs = Qext-Qsca</span><br><span class="line"></span><br><span class="line"><span class="comment">## Import the data from Comosl</span></span><br><span class="line">data2 = genfromtxt(<span class="string">'20170721-gold-nanoparticle-scattering-efficiency.txt'</span>,</span><br><span class="line">                   skip_header=<span class="number">1</span>)</span><br><span class="line">wl2 = data2[:,<span class="number">0</span>] <span class="comment"># wavelength in nanometer</span></span><br><span class="line">Qsca_comsol = data2[:,<span class="number">1</span>]</span><br><span class="line">Qabs_comsol = data2[:,<span class="number">2</span>]</span><br><span class="line">Qext_comsol = data2[:,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">3.25</span>,<span class="number">2.00</span>))</span><br><span class="line"></span><br><span class="line">ax.plot(wl,Qext,<span class="string">'r--'</span>,linewidth=<span class="number">1</span>,markersize=<span class="number">3</span>,label=<span class="string">'Qext-M'</span>)</span><br><span class="line">ax.plot(wl2,Qext_comsol,<span class="string">'ro'</span>,linewidth=<span class="number">1</span>,markersize=<span class="number">3</span>,label=<span class="string">'Qext-C'</span>)</span><br><span class="line"><span class="comment">## Scaling factor of 1/n, n is the refractive index of the medium</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ax.plot(wl,Qsca,<span class="string">'b--'</span>,linewidth=<span class="number">1</span>,markersize=<span class="number">3</span>,label=<span class="string">'Qsca-M'</span>)</span><br><span class="line">ax.plot(wl2,Qsca_comsol,<span class="string">'bv'</span>,linewidth=<span class="number">1</span>,markersize=<span class="number">3</span>,label=<span class="string">'Qsca-C'</span>)</span><br><span class="line"></span><br><span class="line">ax.plot(wl,Qabs,<span class="string">'g--'</span>,linewidth=<span class="number">1</span>,markersize=<span class="number">3</span>,label=<span class="string">'Qabs-M'</span>)</span><br><span class="line">ax.plot(wl2,Qabs_comsol,<span class="string">'g+'</span>,linewidth=<span class="number">1</span>,markersize=<span class="number">3</span>,label=<span class="string">'Qabs-C'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## Set xlim and ylim</span></span><br><span class="line">ax.set_xlim([<span class="number">450</span>,<span class="number">750</span>])</span><br><span class="line">ax.set_ylim([<span class="number">-0.3</span>,+<span class="number">10</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set xticks and yticks</span></span><br><span class="line">plt.tick_params(axis=<span class="string">'both'</span>, direction=<span class="string">'in'</span>)</span><br><span class="line">ax.set_xticks(range(<span class="number">500</span>,<span class="number">710</span>,<span class="number">100</span>))</span><br><span class="line">ax.set_yticks(range(<span class="number">0</span>,<span class="number">10</span>,<span class="number">1</span>))</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Set labels</span></span><br><span class="line">ax.set_xlabel(<span class="string">'Wavelength(nm)'</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">'Scattering Efficiency Q'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## Show the legend</span></span><br><span class="line">ax.legend(loc=<span class="string">'upper right'</span>,shadow=<span class="keyword">False</span>, frameon=<span class="keyword">False</span>, fontsize=<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Adjust the position of axis</span></span><br><span class="line">plt.subplots_adjust(left=<span class="number">0.11</span>,right=<span class="number">0.98</span>,bottom=<span class="number">0.20</span>,top=<span class="number">0.98</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># save figure</span></span><br><span class="line"><span class="comment">#fig.savefig('20170721-gold-nanoparticle-scattering-efficiency.svg')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># show the figure</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+<h4 id="Task-3-Simulate-the-scattering-with-finite-element-method-Comsol"><a href="#Task-3-Simulate-the-scattering-with-finite-element-method-Comsol" class="headerlink" title="Task 3. Simulate the scattering with finite element method (Comsol)"></a>Task 3. Simulate the scattering with finite element method (Comsol)</h4><ol>
+<li>Comsol model exchange for <a href="https://www.comsol.com/community/exchange/215/" target="_blank" rel="noopener">Mie scattering.</a></li>
+<li>When setting the energy flux, it’s important to consider the refractive index of the medium in which the nanoparticle is embedded. Otherwise, the scattering, absorption, and extinction cross sections from FEM will be increased by a factor of $n$.<br>$S=\frac{E<em>{0}^{2}}{2 \eta}=\frac{E</em>{0}^{2}}{2 \eta_0} \cdot n$</li>
+</ol>
+<h4 id="Task-4-Compare-and-discuss-the-numerical-and-analytical-results"><a href="#Task-4-Compare-and-discuss-the-numerical-and-analytical-results" class="headerlink" title="Task 4. Compare and discuss the numerical and analytical results"></a>Task 4. Compare and discuss the numerical and analytical results</h4><p>Mie theory and Comsol simulation.</p>
+<p><img src="/2017/07/15/Gold-Nanoparticles-Mie-theory-and-FEM-Simulation/20170721-gold-nanoparticle-scattering-efficiency.svg" alt></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Comsol-Mie-theory/" rel="tag"># Comsol, Mie theory</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/07/08/Comsol-Error-Messages/" rel="prev" title="Comsol Error Messages">
+      <i class="fa fa-chevron-left"></i> Comsol Error Messages
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/10/20/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-1-Derive-the-analytical-solution-Mie-theory"><span class="nav-number">1.</span> <span class="nav-text">Task 1. Derive the analytical solution (Mie theory)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-2-Calculate-the-scattering-and-absorption-cross-sections-in-Python"><span class="nav-number">2.</span> <span class="nav-text">Task 2. Calculate the scattering and absorption cross sections in Python</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-3-Simulate-the-scattering-with-finite-element-method-Comsol"><span class="nav-number">3.</span> <span class="nav-text">Task 3. Simulate the scattering with finite element method (Comsol)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Task-4-Compare-and-discuss-the-numerical-and-analytical-results"><span class="nav-number">4.</span> <span class="nav-text">Task 4. Compare and discuss the numerical and analytical results</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">For the people</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">For the people</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
