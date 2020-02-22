@@ -23,3 +23,5 @@ If the frequency of a letter in string s is larger than that in string t (possib
 Tried back tracking during the contest but didn't work it out.
 
 A [tutorial](https://leetcode.com/problems/maximum-students-taking-exam/discuss/503686/A-simple-tutorial-on-this-bitmasking-problem) on bit masking problem together with dynamic programming.
+
+The key observation is that the decision on the current row only depends on the status its previous row (Huahua, Youtuber). Thus instead of back tracking, it's better to use dynamic programming so that the time complexity can be considerably reduced.
