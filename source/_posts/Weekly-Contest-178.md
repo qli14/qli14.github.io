@@ -3,7 +3,7 @@ title: Weekly Contest 178
 mathjax: true
 date: 2020-03-02 21:32:50
 tags:
-description:(3/4). Rank 1867. The first two problem are trivial. I was stuck in the third problem for too long a time. The basic idea was not right, leading to TLE.
+description: (3/4). Rank 1867. The first two problem are trivial. I was stuck in the third problem for too long a time. The basic idea was not right, leading to TLE.
 ---
 
 ### 1367. Linked List in Binary Tree
